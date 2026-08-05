@@ -1,0 +1,17 @@
+OpenShift Enterprise Platform has been installed.
+
+Verify:
+
+oc get all
+
+Retrieve the route:
+
+oc get route
+
+Check Pods:
+
+oc get pods
+
+Check Logs:
+
+oc logs deployment/openshift-app

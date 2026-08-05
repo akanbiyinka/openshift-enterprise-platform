@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+
+metadata:
+
+  name: allow-web
+
+  namespace: openshift-enterprise-platform
+
+spec:
+
+  podSelector:
+
+    matchLabels:
+      app: openshift-app
+
+  policyTypes:
+
+  - Ingress
+
+  ingress:
+
+  - from:
+
+    - namespaceSelector: {}
+
+    ports:
+
+    - protocol: TCP
+
+      port: 8080
