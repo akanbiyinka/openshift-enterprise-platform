@@ -13,17 +13,6 @@ resource "kubernetes_namespace" "project" {
 }
 
 
-resource "kubernetes_service_account" "app" {
-
-  metadata {
-
-    name = var.app_name
-
-    namespace = kubernetes_namespace.project.metadata[0].name
-
-  }
-
-}
 
 
 resource "kubernetes_config_map" "config" {
