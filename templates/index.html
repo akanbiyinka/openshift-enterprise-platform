@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>OpenShift Enterprise Platform</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🚀 OpenShift Enterprise Platform</h1>
+
+<p>Status</p>
+
+<h2>Running</h2>
+
+<p>Version</p>
+
+<h3>{{ version }}</h3>
+
+<p>Hostname</p>
+
+<h3>{{ hostname }}</h3>
+
+<button onclick="window.location='/api'">
+
+View API
+
+</button>
+
+</div>
+
+</body>
+</html>

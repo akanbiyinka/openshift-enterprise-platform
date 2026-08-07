@@ -68,7 +68,7 @@ jobs:
 
       - name: Update Deployment Image
         run: |
-          sed -i "s|ghcr.io/<your-github-username>/openshift-enterprise-platform:latest|${IMAGE_NAME}:${GITHUB_SHA}|g" openshift/deployment.yaml
+          sed -i "s|ghcr.io/akanbiyinka/openshift-enterprise-platform:latest|${IMAGE_NAME}:${GITHUB_SHA}|g" openshift/deployment.yaml
 
       - name: Deploy
         run: |

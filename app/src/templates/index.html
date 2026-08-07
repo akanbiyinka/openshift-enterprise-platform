@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+OpenShift Enterprise Platform
+</title>
+
+<link rel="stylesheet"
+href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+
+<h1>
+OpenShift Enterprise Platform
+</h1>
+
+<p>
+Kubernetes Application Dashboard
+</p>
+
+</div>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h2>
+Cluster Status
+</h2>
+
+<p class="healthy">
+Running
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>
+Active Pods
+</h2>
+
+<h1>
+{{running}}
+</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>
+Node
+</h2>
+
+<p>
+{{hostname}}
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+<h2>
+Applications
+</h2>
+
+
+<table>
+
+<tr>
+
+<th>
+Pod Name
+</th>
+
+<th>
+Status
+</th>
+
+</tr>
+
+
+{% for pod in pods %}
+
+<tr>
+
+<td>
+{{pod.name}}
+</td>
+
+<td class="healthy">
+{{pod.status}}
+</td>
+
+
+</tr>
+
+{% endfor %}
+
+
+</table>
+
+
+</body>
+
+</html>
