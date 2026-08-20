@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -8,8 +7,36 @@
 OpenShift Enterprise Platform
 </title>
 
-<link rel="stylesheet"
-href="/static/style.css">
+
+<style>
+
+body {
+font-family: Arial;
+background:#f5f5f5;
+}
+
+
+.card {
+
+background:white;
+padding:20px;
+margin:20px;
+border-radius:10px;
+box-shadow:0 2px 5px #aaa;
+
+}
+
+
+.title {
+
+background:#ee0000;
+color:white;
+padding:20px;
+
+}
+
+
+</style>
 
 </head>
 
@@ -17,108 +44,43 @@ href="/static/style.css">
 <body>
 
 
-<div class="header">
+<div class="title">
 
 <h1>
-OpenShift Enterprise Platform
-</h1>
-
-<p>
-Kubernetes Application Dashboard
-</p>
-
-</div>
-
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h2>
-Cluster Status
-</h2>
-
-<p class="healthy">
-Running
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>
-Active Pods
-</h2>
-
-<h1>
-{{running}}
+OpenShift Enterprise Platform Dashboard
 </h1>
 
 </div>
 
 
-
 <div class="card">
 
 <h2>
-Node
+Cluster Overview
 </h2>
 
 <p>
-{{hostname}}
+Nodes:
+{{data.nodes}}
 </p>
 
-</div>
+<p>
+Pods:
+{{data.pods}}
+</p>
+
+<p>
+Deployments:
+{{data.deployments}}
+</p>
+
+<p>
+HPA:
+{{data.hpa}}
+</p>
 
 
 </div>
-
-
-
-
-<h2>
-Applications
-</h2>
-
-
-<table>
-
-<tr>
-
-<th>
-Pod Name
-</th>
-
-<th>
-Status
-</th>
-
-</tr>
-
-
-{% for pod in pods %}
-
-<tr>
-
-<td>
-{{pod.name}}
-</td>
-
-<td class="healthy">
-{{pod.status}}
-</td>
-
-
-</tr>
-
-{% endfor %}
-
-
-</table>
 
 
 </body>
