@@ -4,10 +4,12 @@ on:
   pull_request:
     branches:
       - main
+      - Openbranch
 
   push:
     branches:
       - main
+      - Openbranch
 
 permissions:
   contents: read
