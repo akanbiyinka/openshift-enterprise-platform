@@ -1,7 +1,5 @@
 from flask import Flask, render_template, jsonify
-from kubernetes_client import get_cluster_data
-
-
+from .kubernetes_client import get_cluster_data
 app = Flask(__name__)
 
 
